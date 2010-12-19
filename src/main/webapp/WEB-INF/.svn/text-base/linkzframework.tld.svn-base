@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib
+	PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+	"http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>linkz</short-name>
+    <uri>http://www.linkzsistemas.com.br/framework/</uri>
+    <display-name>linkzframework</display-name>
+
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.Action -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>action</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.Action</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Taglib usada para criar links com ou sem imagens de uma forma padronizada, util para se usar como botões nas páginas. 
+ Abstrai as mudanças de CSS para cada estilo de link.
+ Nota: Deve ser usado somente com os icones pequenos</description>
+        <attribute>
+        	<name>iconClass</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Classe CSS que define a imagem/icone (Padrao=mesmo nome da innerAction)</description>
+        </attribute>
+        <attribute>
+        	<name>action</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Action a ser executada quando se clicar.
+  Se você definir isJS=true, a action vai ser o nome da funcao JavaScript que sera chamada</description>
+        </attribute>
+        <attribute>
+        	<name>isJS</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Define se vai ser um link normal ou uma função JavaScript. (Padrão = false, link normal)</description>
+        </attribute>
+        <attribute>
+        	<name>params</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Parametros a serem enviados para a Action ou funcao JavaScript. Formato: id=2(8)data=12/2/2008 ;</description>
+        </attribute>
+        <attribute>
+        	<name>hideLinks</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Define se os links devem parecer na barra de status do navegador. (Padrão = false)</description>
+        </attribute>
+        <attribute>
+        	<name>text</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Texto que irá parecer ao lado do Icone</description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: BasicHtmlTag =============== -->
+        <attribute>
+        	<name>name</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Name in component .</description>
+        </attribute>
+        <attribute>
+        	<name>id</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Id in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>klass</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Class in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>disabled</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Disabled component.</description>
+        </attribute>
+        <attribute>
+        	<name>klassStyle</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Style in component.</description>
+        </attribute>
+        <attribute>
+        	<name>title</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Atributo Title do HTML, as tags podem usa-lo para outra coisa a mais.</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.BasicDialog -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>basicDialog</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.BasicDialog</tag-class>
+        <body-content>jsp</body-content>
+        <display-name></display-name>	
+        <description>TODO: Descrição da classe</description>
+        <attribute>
+        	<name>theme</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>nomeInstancia</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>funcaoValidacao</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>acaoSalvar</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>titulo</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>autoOpen</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>draggable</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>modal</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>resizable</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>position</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>height</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>maxHeight</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>minHeight</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>width</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>maxWidth</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>minWidth</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: HTMLTag =============== -->
+        <attribute>
+        	<name>extra</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>separator</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.Button -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>button</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.Button</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Botão que pode ser usado para executar Actions(Link) ou funções JavaScript, pode tambem ser usado uma imagem com o Botão através do atributo
+ iconCls.
+ Em adição ao button comun do Html, ele adiciona o suporte a dois outros tipos(type), o clear e o back. 
+ Tambem tem suporte para</description>
+        <attribute>
+        	<name>text</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Texto do Botão</description>
+        </attribute>
+        <attribute>
+        	<name>iconCls</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Classe CSS do icone a ser exibido no Botão</description>
+        </attribute>
+        <attribute>
+        	<name>action</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Ação a ser executada quando o usuário clicar no botão, se o atributo isJS estiver como true, a action vai ser exetutada como uma 
+ função JavaScript. 
+ Se o botão for do tipo 'submit' essa action vai substituir o valor da action definido no Formulário, e em seguida será dado o Submit com os
+ dados do formulario para assa action.</description>
+        </attribute>
+        <attribute>
+        	<name>isJS</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>De termina se a 'action' informada deve ser tratada como uma função JavaScrpit. Se false a 'action' informada será tratada como 
+ um link para uma Action (Padrão=false)</description>
+        </attribute>
+        <attribute>
+        	<name>isSubmit</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Determina se esse botão deve ser tratado como um submit de formulário (Padrão=false)</description>
+        </attribute>
+        <attribute>
+        	<name>type</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Determina o tipo de botão: submit, button, reset, clear, back. (padrao=button)</description>
+        </attribute>
+        <attribute>
+        	<name>waitTarget</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>ID do elemento onde a mensagen será exibida, ele ira aplicar uma máscara bloquiando a interação apenas com esse elemento.</description>
+        </attribute>
+        <attribute>
+        	<name>waitMessage</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Mensagen que será usada para informar que o servidor está processando. So pode ser usado se o botão for um Submit.
+ Veja a documentação do Msg.waitMessage (JavaScript.)</description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: BasicHtmlTag =============== -->
+        <attribute>
+        	<name>name</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>id</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>klass</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>disabled</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description> 
+        </attribute>
+        <attribute>
+        	<name>klassStyle</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>style</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>title</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.FormContainer -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>formContainer</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.FormContainer</tag-class>
+        <body-content>jsp</body-content>
+        <display-name></display-name>	
+        <description>Tag onde irá ficar os componentes de texto da aplicação, não é o formulário em si,ou seja, ele não cria nenhuma tag form do html, apenas um recurso
+ para organizar o Layout do Formulário. 
+ 
+ A vantagem de se utilizar um FormContainer em conjunto com um {@link FormItem}, é que facilmente pode ser mudar o layout do
+ formulário, e ainda tem vários recusos de usabilidade e interatividade. 
+ 
+ Os items mais importantes para definição do estilo são:
+ {@link #msgTarget}: Determina onde as mensagens de erro devem aparecer.
+ {@link #labelAlign}: Define a posição dos labels do formulário.
+ {@link #labelWidth}: 
+ 
+ O valor/resultado final dos atributos acima seguem são definidor apartir do Estilo definido pelo {@link FormStyle}
+ FormItem > FormContainer >  Session > Application > Default.
+ 
+ Ex: Se você definir o msgTarget no FormContainer, todos os FormItem's filhos que não tiver esse atributo definido
+ tera o mesmo valor que foi definido no FormContainer. Se nada for definido no FormContainer será procurado na session depois no application, se nada
+ tiver sido definido será usado o valor padrão.</description>
+        <attribute>
+        	<name>labelAlign</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Define a posição dos labels do formulário. (valores: top, left).
+ OBS. Se o escolher left, o labelWidth tambem deve ser definido.
+ Isso pode ser definido tanto no FormContainer como no FormItem, se não for definido em nenhum dos dois
+ será pego do contexto de application ou session, se não foi encontrado será usado o padrão.
+ 
+ Isso pode ser configurado via {@link FormStyle}.</description>
+        </attribute>
+        <attribute>
+        	<name>labelWidth</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Espaçamento dos Labels (ex:100px, 100% ), usado quando o labelAlign=left.
+ Se não for definido será pego do contexto de application ou session, se não foi encontrado será usado o padrão.</description>
+        </attribute>
+        <attribute>
+        	<name>useFieldSet</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Determina se deve usado um FieldSet para identificar esses elementos, o atributo title, será usado como o legend do
+ fieldset. (Padrão=false)</description>
+        </attribute>
+        <attribute>
+        	<name>msgTarget</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Determina onde as mensagens de erro devem aparecer. 
+ Assume os mesmo valores que a da tag 'formItem.msgTarget', é usado para definir o padrão usados por todas as tags contidas aqui,
+ sendo quem esse atributo só é aplicado se a tag 'formItem' não definido o msgTarget dela. 
+ (Valores: right,bottom,tooltip).
+ 
+ Isso pode ser configurado via {@link FormStyle}.</description>
+        </attribute>
+        <attribute>
+        	<name>infoTarget</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Determina onde as mensagens de ajuda devem aparecer. 
+ Assume os mesmo valores que a da tag 'FormItem.infoTarget', é usado para definir o padrão usados por todas as tags contidas aqui,
+ sendo quem esse atributo só é aplicado se a tag 'formItem' não definido o infoTarget dela. 
+ (Valores: right,bottom,tooltip).
+ 
+ Isso pode ser configurado via {@link FormStyle}.</description>
+        </attribute>
+        <attribute>
+        	<name>focusEfect</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.Boolean</type>
+        	<description>Ativa ou desativa o efeito quando o campo está en foco.
+ Esse recurso precisa de funções da JQuery.
+ Isso pode ser configurado via {@link FormStyle}.
+ 
+ (Padrão=true).</description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: BasicHtmlTag =============== -->
+        <attribute>
+        	<name>name</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Name in component .</description>
+        </attribute>
+        <attribute>
+        	<name>id</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Id in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>klass</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Class in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>disabled</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Disabled component.</description>
+        </attribute>
+        <attribute>
+        	<name>klassStyle</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Style in component.</description>
+        </attribute>
+        <attribute>
+        	<name>title</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Atributo Title do HTML, as tags podem usa-lo para outra coisa a mais.</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.FormDecorator -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>formDecorator</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.FormDecorator</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Taglib usada para aplicar efeitos e mais interatividade para o formulário. 
+ 
+ Recursos Atuais:
+ - Inicializa os Tooltips de Erro e Ajuda do formulário.
+ - Adiciona eventos nos campos.
+ 
+ 
+ Nota:
+ Essa tag deve ser usada antes da declaração do form principal.
+ Ela foi projetada para ser usada inicialmente com o FormContainer e FormItem.</description>
+        <attribute>
+        	<name>formID</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>ID do formulário onde os efeitos serão aplicados.</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.FormItem -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>formItem</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.FormItem</tag-class>
+        <body-content>jsp</body-content>
+        <display-name></display-name>	
+        <description>TagLib usada em conjunto com {@link FormContainer} para para organizar o Layout do Formulário.
+ Cada campo do formulário  (INPUT, SELECT, etc...) deve ficar dentro de um FormItem, o estilo dele pode ser individual
+ ou pode ficar com o estilo definifo ontem.
+ 
+ Alem de deixar o formulário mais bonito, possue integração com os erros de validação que são exibidos de acordo com o {@link #msgTarget},
+ e os erros exibidos no {@link LinkedFieldErrors}, melhorando a usabilidade/interatividade da aplicação. 
+ Quando ocorre algum erro de validação ele irá mostrar o erro numa DIV chamada div-error-{NAME}, outras tags pode usar esse nome para
+ personalizar como o erro é exibido.
+ </description>
+        <attribute>
+        	<name>label</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>labelAlign</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Define o estilo dos labels desse campo. (valores: top, left).</description>
+        </attribute>
+        <attribute>
+        	<name>info</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Mensagem de informação, pode ser usada para auxiliar o usuário a preencher o campo.</description>
+        </attribute>
+        <attribute>
+        	<name>infoTarget</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Será onde a mensagem de informação será exibida. Os valores aceitados São os mesmos do 'msgTarget'.</description>
+        </attribute>
+        <attribute>
+        	<name>required</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Determina se esse campo deve ser destacado como requerido</description>
+        </attribute>
+        <attribute>
+        	<name>visible</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description></description>
+        </attribute>
+        <attribute>
+        	<name>msgTarget</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Determina onde as mensagens de erro devem aparecer. 
+ Veja a Documentação do FormContainer.msgTarget para mais detalhes.</description>
+        </attribute>
+        <attribute>
+        	<name>fieldName</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Deve ter o mesmo nome do campo que esse form item está vinculado. 
+ É usado para mostrar as mensagens de erro, e destaques.</description>
+        </attribute>
+        <attribute>
+        	<name>useCheckbox</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Define se deve ser criado um campo Checkbox ao lado do Label (Default: false). 
+ O Checkbox terá o nome: is[fieldName]Selected.</description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: BasicHtmlTag =============== -->
+        <attribute>
+        	<name>name</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Name in component .</description>
+        </attribute>
+        <attribute>
+        	<name>id</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Id in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>klass</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Class in compoenent.</description>
+        </attribute>
+        <attribute>
+        	<name>disabled</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Disabled component.</description>
+        </attribute>
+        <attribute>
+        	<name>klassStyle</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Style in component.</description>
+        </attribute>
+        <attribute>
+        	<name>title</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Atributo Title do HTML, as tags podem usa-lo para outra coisa a mais.</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.FrameworkConfig -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>frameworkConfig</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.FrameworkConfig</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Adiciona as importações de CSS e JS basicos que  serao usados na Aplicacao.
+ Ex: jQuery.js, Form.js, icons.css, style.css, form.css ... 
+ 
+ NOTA: Isso deve ser colocado de preferencia no template.</description>
+        <attribute>
+        	<name>loadJQuery</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Determina se deve carregas a jQuery, é altamente aconselhavel, pois muitas outras tags dependem dele.</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.IconsAction -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>iconsAction</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.IconsAction</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Usado para criação de varios icones de forma simplificada.
+ TODO: Descrever classe</description>
+        <attribute>
+        	<name>baseAction</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Nome da Ação usado para se gerar o Link</description>
+        </attribute>
+        <attribute>
+        	<name>actionsNames</name>
+        	<required>true</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Nome das Ações (innerActions) que devem ser criadas para o "bean", os nomes devem ser separados por vírgola
+ OBS's: Por padrão os icones usados tem os mesmos nomes das actions (actionsNames);</description>
+        </attribute>
+        <attribute>
+        	<name>actionsIcons</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Nome dos icones (classes CSS) que devem ser exibidos para suas respectivas actions, os nomes devem ser separados por vírgola
+ Por padão o nome dos icones são os mesmos nomes das actions</description>
+        </attribute>
+        <attribute>
+        	<name>descriptions</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Descrição pra cada innerAction expecificada em "actionsNames", os nomes devem ser separados por vírgola.
+ As descriçãos são geradas automaticamente apartir  do nome das actions (actionsNames);</description>
+        </attribute>
+        <attribute>
+        	<name>hideLinks</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Define se os links devem parecer na barra de status do navegador. (Padrão = false)</description>
+        </attribute>
+        <attribute>
+        	<name>isJS</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Define se vai ser um link normal ou uma função JavaScript. (Padrão = false)</description>
+        </attribute>
+        <attribute>
+        	<name>params</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Parametros a serem enviados para a Action ou funcao JavaScript. Ex( id=2(8)data=12/2/2008 );</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.LinkedFieldErrors -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>linkedFieldErrors</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.LinkedFieldErrors</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>TagLib usada para exibir as mensagens de validação, com recursos de interatividade e usabilidade.
+ - São mostrados os campos que deram erros e as mensagens de erro (se o errorMessages=true)
+ - Quando o usuário passa o mouse por cima do nome do campo, o campo correspondente no formulário é destacado.
+ - Se clicar em cima do nome do campo,  o campo correspondente no formulário é colocado em foco pronto pare ser corrigido.
+ 
+ 
+ NOTA: 
+ - Os links só funcionan se você estiver utilizando junto com o 'formContainer' e 'formItem'... 
+ - As mensagens de validação aparecem na mesma sequencia que foram definidas no filtro de validação, por isso
+   é interessante seguir o mesmo fluxo do formulário.
+ - Usa a classe JavaScript Linkz.Form para fazer a interatificade.</description>
+        <attribute>
+        	<name>msg</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Mensagem que deve aparecer quando tiver algum erro de validação.</description>
+        </attribute>
+        <attribute>
+        	<name>errorMessages</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Exibir tambem as mensagens de erro na parte superior do formulário  (Padrao = true)</description>
+        </attribute>
+        <attribute>
+        	<name>btnHideOthers</name>
+        	<required>false</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>boolean</type>
+        	<description>Colocar um botão para ocultar/exibir os campos que não estão com erros de validação. (TODO: NAO Implementado)</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.Messages -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>messages</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.Messages</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>TagLib usada para exibir todas as as mensagens colocadas pela action, seja sucess, error, info, etc ...</description>
+        <attribute>
+        	<name>type</name>
+        	<required>true</required>
+        	<rtexprvalue>false</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Tipo de mensagem a ser exibida. (valores: success, error, info, warn, all).  (Padrão=all)</description>
+        </attribute>
+        <attribute>
+        	<name>style</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Estilo da mensagem. (valores: small, big, balloon) .
+ 
+ Isso pode ser configurado via {@link FormStyle}.</description>
+        </attribute>
+        <attribute>
+        	<name>message</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>java.lang.String</type>
+        	<description>Exibir uma mensagem específica</description>
+        </attribute>
+    </tag>
+
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.TooltipConfig -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>tooltipConfig</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.TooltipConfig</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name>	
+        <description>Adiciona as importações de CSS e JS necessários para se usar os Tooltips.
+ Atualmente a implementação padrão está usando: jQuery QTip (http://craigsworks.com/projects/qtip/)</description>
+    </tag>
+    
+    <!-- ==================================================================================== -->
+    <!-- Tag: br.com.linkzsistemas.framework.taglib.html.SelectTag -->
+    <!-- ==================================================================================== -->
+    <tag>
+        <name>select</name>
+        <tag-class>br.com.linkzsistemas.framework.taglib.html.SelectTag</tag-class>
+        <body-content>empty</body-content>
+        <display-name></display-name> 
+        <description></description>
+        <attribute>
+          <name>beanClass</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+          <type>java.lang.String</type>
+          <description>Nome da Classe de Modelo (Bean) que esse select está listando, é apenas o nome da Classe sem o pacote. 
+ Esse nome é importante por que ele irá dar origem ao 'name' do Select, por exemplo, se a classe for 'Pessoa' o name é 'pessoaID', e as suas ações: PessoaAction.cadastro.lkz, etc..</description>
+        </attribute>
+        <attribute>
+          <name>multiple</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>boolean</type>
+          <description>Determina se nesse select pode ser selecionado mais de 1 valor</description>
+        </attribute>
+        <attribute>
+          <name>editable</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>boolean</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>autoHidePreview</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>boolean</type>
+          <description>Define que a previsualização deve ser ocultada automaticamente. (TODO: falta implementar)</description>
+        </attribute>
+        <attribute>
+          <name>updateSelect</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description>Select que deve ser atualizado quando esse elemento for selecionado (Doubleselect). Informar o Nome da Entidade (Ex: Pessoa)</description>
+        </attribute>
+        <attribute>
+          <name>actions</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description>Acões suportadas por esse select. (Valores: insert, update, search, preview)</description>
+        </attribute>
+        <attribute>
+          <name>size</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>int</type>
+          <description>Tamanho 'físico' do select</description>
+        </attribute>
+        <attribute>
+          <name>listname</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description>Nome da Lista usada para alimentar o Select, ela já possue um valor padrão seguindo as Convenções do {@link NamingConventions} 
+ Se o atributo beanClass for 'Pessoa' o nome da lista será: pessoaOptions.</description>
+        </attribute>
+        <!-- =============== Abributos herdado da Classe: BasicHtmlTag =============== -->
+        <attribute>
+          <name>name</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>id</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>klass</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>disabled</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>klassStyle</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+        <attribute>
+          <name>title</name>
+          <required>false</required>
+          <rtexprvalue>false</rtexprvalue>
+          <type>java.lang.String</type>
+          <description></description>
+        </attribute>
+    </tag>
+</taglib>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The Mentawai controller -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Aplicacao</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <jsp-config>
+    <taglib>
+      <taglib-uri>http://www.linkzsistemas.com.br/framework/</taglib-uri>
+      <taglib-location>/WEB-INF/linkzframework.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://www.mentaframework.org/tags-mtw/</taglib-uri>
+      <taglib-location>/WEB-INF/mentawai.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+  
+	<listener>
+    	<listener-class>
+			br.com.linkzsistemas.linkztraining.agendamento.AgendadorTarefaServetListener
+    	</listener-class>
+    </listener> 
+    
+    <!-- Monitorar Sessoes e Usuários -->
+ 	<listener>
+      <listener-class>
+        	br.com.linkzsistemas.framework.servlet.ContextListener
+      </listener-class>
+    </listener>
+
+ 	<!-- Monitorar Sessoes e Usuários -->
+    <listener>
+      <listener-class>
+        	br.com.linkzsistemas.framework.servlet.SessionListener
+      </listener-class>
+    </listener>
+    
+  
+  <filter>
+    <filter-name>DebugFilter</filter-name>
+    <filter-class>
+            br.com.linkzsistemas.framework.servlet.DebugServletFilter
+        </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DebugFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>org.mentawai.core.Controller</servlet-class>
+    <init-param>
+    	<param-name>reloadAppManager</param-name>
+    	<param-value>true</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>debugMode</param-name>
+    	<param-value>true</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>*.mtw</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>*.lkz</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TemplateServlet</servlet-name>
+    <servlet-class>org.mentawai.template.JspTemplateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TemplateServlet</servlet-name>
+    <url-pattern>*.page</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>ResponseOverrideFilter</filter-name>
+    <filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ResponseOverrideFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>ResponseOverrideFilter</filter-name>
+    <url-pattern>*.page</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>ResponseOverrideFilter</filter-name>
+    <url-pattern>*.mtw</url-pattern>
+  </filter-mapping>
+</web-app>

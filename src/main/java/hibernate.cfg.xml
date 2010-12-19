@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+ <session-factory>
+  <!-- properties -->
+  <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+  <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+  <property name="connection.url">jdbc:hsqldb:file:demodb</property>
+  <property name="connection.username">sa</property>
+  <property name="connection.password"></property>
+  
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+  <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+
+  <property name="show_sql">false</property>
+  <property name="hibernate.format_sql">true</property>
+  <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+
+  <mapping class="model.Queixa"/>
+
+ </session-factory>
+</hibernate-configuration>

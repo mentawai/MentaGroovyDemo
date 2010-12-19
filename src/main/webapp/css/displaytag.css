@@ -1,0 +1,399 @@
+   
+
+
+
+
+dt {
+	font-weight: bold;
+}
+
+.clear {
+	clear: both;
+}
+
+
+div#header {
+	background-color: #fea;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 20px 10px 30px 15px;
+	margin: 10px 5% 20px 5%;
+}
+
+div#header ul {
+	margin: 10px 0 0 0;
+}
+
+div#header ul li {
+	list-style-type: none;
+	float: left;
+	padding: 0 10px 0 0;
+	font-weight: bold;
+}
+
+div#header ul li a {
+	display: block;
+	color: #f00;
+	border-left: 1px solid red;
+	padding-left: 5px;
+}
+
+div#header ul li a:hover {
+	border-left: 1px solid #000;
+}
+
+
+acronym {
+	border-bottom: 1px dashed #000;
+	cursor: help;
+}
+
+div#body {
+	margin: 0 5% 20px 5%;
+	padding: 20px 20px 20px 20px;
+	border: 1px dashed #666;
+}
+
+div#validxhtml {
+	float: right;
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px;
+	margin: 5px;
+	width: 100px;
+	text-align: center;
+}
+
+div#footer {
+	border-top: 1px solid #666;
+	padding: 5px 5px 5px 5px;
+	text-align: right;
+}
+
+div#footer span {
+	float: left;
+}
+
+/*.changed {
+	background-color: #ee0;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+}*/
+
+ul#stylelist {
+	margin: 0 0 30px 0;
+}
+
+ul#stylelist li {
+	list-style-type: none;
+	float: left;
+	width: 100px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	padding: 2px;
+	margin-right: 2px;
+}
+
+table.displaytag {
+	width: 100%;
+	margin: 5px 0 10px 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	/*background-image:  url("../imagens/jpg/blurry.jpg"); 
+	background-position: right;*/
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	border-spacing: 2px;
+	border-collapse: separate;
+	border: 1px;
+	 	
+}
+
+
+th {
+	background-image: -moz-linear-gradient(center top , #4D92CF, #356C9D 65%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4D92CF), to(#356C9D));
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4D92CF', EndColorStr='#356C9D');
+	border-top: 1px solid #356c9d;
+	border-bottom: 1px solid #04325c;
+	color:#ffffff;
+}
+ 
+th.displaytag,td.displaytag {
+	padding: 4px 4px 4px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+thead tr {
+	background-image: url("../imagens/jpg/table-top.jpg");
+    background-repeat: repeat-x;
+}
+
+th.sorted {
+	background-color: transparent;
+}
+
+th a,th a:visited {
+	color: #fff;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+	color:#ffffff;
+}
+
+th.sortable a {
+	background-image: url(../imagens/png/displaytag/arrow_off.png);
+}
+
+th.order1 a {
+	background-image: url(../imagens/png/displaytag/arrow_down.png);
+}
+
+th.order2 a {
+	background-image: url(../imagens/png/displaytag/arrow_up.png);
+}
+
+tr.odd {
+	/*background-color: #fff;*/
+	text-align: center;
+	background-color: none;
+}
+
+table.displaytag tr td{
+	padding: 0 8px;
+	font-size: 0.9em;
+} 
+
+table.displaytag#tabela tr td{
+	padding: 4;
+} 
+
+table.displaytag#tabela thead tr th{
+	padding: 2 0;
+} 
+
+table.displaytag#enderecos thead tr th{
+	padding: 2 0;
+	
+}
+
+table.displaytag#telefones thead tr th{
+	padding: 2 0;
+} 
+
+table.displaytag tr th{
+	padding: 2 0;
+	text-shadow: 0 -1px 0 #000;
+	height: 28px;
+}
+
+/** Custom */
+table.displaytag td.date{
+	width:120px;text-align:center;	
+}
+
+table.displaytag td.dateTime{
+	width:150px;text-align:center;	
+}  
+
+tr.tableRowEven,tr.even {
+	/*background-color: #AFEEEE;
+	background-color: #e1e1e1;*/
+	text-align: center;
+	background-color: none;
+}
+
+
+ul#showsource {
+	float: right;
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: 5px;
+	width: 100px;
+	list-style-type: none;
+}
+
+/* test styles */
+table.its thead tr {
+	background-color: #69c;
+}
+
+table.its tr.even {
+	background-color: #def;
+	background-color: none;
+}
+
+table.mars thead tr {
+	background-color: #9c9;
+}
+
+table.mars tr.even {
+	background-color: #ccb;
+	background-color: none;
+}
+
+table.mars tr.odd {
+	background-color: #eec;
+	background-color: none;
+}
+
+table.simple thead tr {
+	background-color: #eee;
+}
+
+table.simple tr.even {
+	background-color: #fff;
+	background-color: none;
+}
+
+table.simple {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+
+table.simple td,table.simple th {
+	border: 1px solid #ccc;
+}
+
+table.nocol tbody td,table.nocol tbody th {
+	border-left: none;
+	border-right: none;
+}
+
+table.report td,table.report th {
+	font: menu;
+}
+
+table.report th {
+	background: buttonface;
+	border-width: 1px;
+	border-style: solid;
+	border-color: threedhighlight threedshadow threedshadow threedhighlight;
+	cursor: hand;
+}
+
+table.report idcol {
+	background: buttonface;
+}
+
+table.report tr.even {
+	background-color: #399;
+	background-color: none;
+}
+
+table.report tbody {
+	height: 100px;
+	overflow: auto;
+}
+
+table.report {
+	height: 120px;
+	overflow: auto;
+}
+
+table.report tbody tr {
+	height: 10px;
+}
+
+table.mark td.tableCellError {
+	background-color: #d00;
+	color: #fff;
+}
+
+table.sublist {
+	margin: 0 0 0 0;
+	width: 100%;
+}
+
+table.sublist td,table.sublist th {
+	width: 50%;
+}
+
+div.exportlinks {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: -9px 0 10px 0;
+	width: 99%;
+	text-align : center;
+}
+
+span.export {
+	padding: 0 4px 1px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background-image: url(../imagens/png/displaytag/ico_file_excel.png);
+}
+
+span.csv {
+	background-image: url(../imagens/png/displaytag/ico_file_csv.png);
+}
+
+span.xml {
+	background-image: url(../imagens/png/displaytag/ico_file_xml.png);
+}
+
+span.pdf {
+	background-image: url(../imagens/png/displaytag/ico_file_pdf.png);
+}
+
+
+table.simple td.textRed {
+	color: #b11;
+}
+
+tr.odd, tr.even{
+	background-image:transparent  url("../imagens/png/back.png");
+	background-repeat: repeat-x;
+	/*cursor: pointer;)*/
+	padding: 2px auto;
+	height: 25px;
+	font-size: 14px;
+}
+
+tr.odd{
+	background-color: #dedede;
+}
+
+tr.odd:hover{
+	background-color: #CFCFCF;
+	color: #ffffff;  
+}
+
+tr.even:hover{
+	background-color: #CFCFCF;
+	color: #ffffff;
+}
+
+/*.painelFuncoes, #divBuscas,*/#divPerfilUsuario,#divTituloFormulario{
+	width: auto;
+	padding:5px;
+	/*border: 1px outset #ccc;*/
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius: 8px;
+	-moz-box-shadow: 2px 2px 8px #515151;
+	-webkit-box-shadow: 2px 2px 8px #515151;
+	box-shadow: 2px 2px 8px #515151;
+	float: none;
+	margin-right: 5px;
+	margin-bottom: 15px;
+	background-image: -moz-linear-gradient(top,  #4D92CF,#356c9d 65%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4D92CF), to(#356c9d));
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4D92CF', EndColorStr='#356c9d');
+}
