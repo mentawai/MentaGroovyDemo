@@ -30,14 +30,17 @@ E alterar a dependência do mentawai para a seguinte:
 		<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/mentawai-X.X.X-groovy.jar</systemPath>
 	</dependency>
 
-
-
+E finalmente executar no maven o goal <b>jetty:run</b>, para as coisas funcionarem.
 
 ### Considerações sobre o Projeto.
 - A aplicação consiste em um controle de chamados/queixas, com um crud simples, usando uma arquitetura MVC básica com Service e Daos. <br/>
 As classes em java estão em <b>src/main/java</b>, em groovy <b>src/main/groovy</b>, e as jsp's estão em <b>/src/main/webapp</b>
 
+- O armazenamento dos dados pode ser feito em Memória (/groovy/dao/list/QueixaDaoList.groovy) ou no banco (groovy/dao/hibernate/QueixaDaoHbn.groovy) , usando o hsqldb
+
 - O mapeamento do hibernate teve que ser feitos em classes java, pois o hibernate não reconhece as classes nativa em groovy (durante a configuração), pois a engine de configuração do hibernate usa reflection em cima do ClassLoader do java não do Groovy, mas as operações (save/update/delete) em tempo de execução funcionam tranquilamente.
+
+
 
 - Futuramente será integrado na versão oficial no mentawai, faltando apenas alguns ajustes.
 
