@@ -20,7 +20,7 @@ Instalação
 --------------------
 
 Para rodar o projeto você deve ter o Eclipse e o Maven instalado na sua maquina. Depois basta efetuar o download do projeto, e da biblioteca: <b>mentawai-X.X.X-groovy.jar</b> (um fork do mentawai com suporte ao groovy)
-E alterar a dependência do mentawai para a seguinte:
+, e alterar no <b>pom.xml</b> a dependência do mentawai para a seguinte:
 
 	<dependency>
 		<groupId>org.mentaframework</groupId>
