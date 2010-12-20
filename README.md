@@ -18,9 +18,5 @@ Principais recursos da Integração (pendentes)
 - Suporte ao Mapeamento do Hibernate em Classes Groovy.
 
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
+# Arquitetura da Aplicação
+![Arquitetura](https://github.com/mentawai/MentaGroovyDemo/raw/master/artefatos/Arquitetura.jpg)
