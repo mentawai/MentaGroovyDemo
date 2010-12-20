@@ -17,7 +17,18 @@ A aplicação consiste em um controle de chamados/queixas, com um crud simples.
 
 
 ### Instalação
-Para rodar o projeto você deve ter o Eclipse e o Maven instalado na sua maquina. Depois basta efetuar o download do projeto, e da biblioteca: [mentawai-X.X.X-groovy.jar] , um fork do mentawai com suporte ao groovy.
+Para rodar o projeto você deve ter o Eclipse e o Maven instalado na sua maquina. Depois basta efetuar o download do projeto, e da biblioteca: <b>mentawai-X.X.X-groovy.jar</b> (um fork do mentawai com suporte ao groovy)
+E alterar a dependência do mentawai para a seguinte:
+-------
+		<dependency>
+			<groupId>org.mentaframework</groupId>
+			<artifactId>mentawai</artifactId>
+			<version>1.15.1-groovy</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/mentawai-X.X.X-groovy.jar</systemPath>
+		</dependency>
+-------
+
 
 
 ### Considerações sobre o Projeto.
