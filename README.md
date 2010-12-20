@@ -38,11 +38,9 @@ As classes em java estão em <b>src/main/java</b>, em groovy <b>src/main/groovy<
 
 - O armazenamento dos dados pode ser feito em Memória [QueixaDaoList.groovy](https://github.com/mentawai/MentaGroovyDemo/blob/master/src/main/groovy/dao/list/QueixaDaoList.groovy) ou no banco [QueixaDaoHbn.groovy](https://github.com/mentawai/MentaGroovyDemo/blob/master/src/main/groovy/dao/hibernate/QueixaDaoHbn.groovy) , usando o hsqldb
 
-- O mapeamento do hibernate teve que ser feitos em classes java, pois o hibernate não reconhece as classes nativa em groovy (durante a configuração), pois a engine de configuração do hibernate usa reflection em cima do ClassLoader do java não do Groovy, mas as operações (save/update/delete) em tempo de execução funcionam tranquilamente.
+- O mapeamento do hibernate teve que ser feitos em classes java, pois o hibernate não reconhece as classes nativa em groovy (durante a configuração), pois a engine de configuração do hibernate usa reflection em cima do ClassLoader do java não do Groovy, mas as operações (save/update/delete) em tempo de execução funcionam tranquilamente nas classes groovy.
 
-
-
-- Futuramente será integrado na versão oficial no mentawai, faltando apenas alguns ajustes.
+- Futuramente essa integração estará disponível na versão oficial no mentawai, faltando apenas alguns ajustes.
 
 
 Arquitetura da Aplicação
