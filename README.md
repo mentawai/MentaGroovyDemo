@@ -1,7 +1,7 @@
 MentaGroovyDemo
 ==========================
 
-Projeto de demonstração e testes da integração do [Mentawai](http://www.mentaframework.org/) com o [Groovy](http://groovy.codehaus.org/).
+Projeto de demonstração e testes da integração do [Mentawai](http://www.mentaframework.org/) com o [Groovy](http://groovy.codehaus.org/), uma linguagem dinâmica baseada no java e que roda na JVM. <br/>
 A aplicação consiste em um controle de chamados/queixas, com um crud simples.
 
 
